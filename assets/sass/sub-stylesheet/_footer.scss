@@ -1,0 +1,108 @@
+/* @@@@@@@@@@@@@  Footer Section Start Here  @@@@@@@@@@@@@@ */
+.footer-top {
+    .post-item {
+        @include breakpoint(max-md) {
+            margin-bottom: 50px;
+        }
+        .footer-logo {
+            margin-bottom: 32px;
+        }
+        .footer-location {
+            li {
+                @extend %flex;
+                padding: 8px 0;
+                .icon-part {
+                    width: 30px;
+                    i {
+                        padding-top: 10px;
+                        color: $theme-color;
+                    }
+                }
+                .content-part {
+                    width: calc(100% - 30px);
+                    p {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        .post-title {
+            margin: 0px 0px 30px;
+        }
+        .footer-post {
+            .media {
+                &:hover {
+                    .fp-thumb {
+                        img {
+                            @include transform(scale(1.05));
+                        }
+                    }
+                }
+                .fp-thumb {
+                    width: 100px;
+                    height: 100px;
+                    line-height: 100px;
+                    background: $white-color;
+                    text-align: center;
+                    @include border-radius(3px);
+                    @extend %hidden;
+                    img {
+                        width: 100%;
+                        @include transition($transition);
+                    }
+                }
+                .media-body {
+                    h6 {
+                        &:hover {
+                            color: $theme-color;
+                        }
+                    }
+                    .rating {
+                        font-size: 12px;
+                        margin-bottom: 5px;
+                        i {
+                            color: $theme-color;
+                        }
+                        span {
+                            color: $desc-color;
+                        }
+                    }
+                    .price {
+                        color: $title-color;
+                    }
+                }
+            }
+        }
+        .footer-gellary {
+            .figure {
+                margin: 3px;
+                @extend %hidden;
+                &:hover {
+                    img {
+                        @include transform(scale(1.05));
+                    }
+                }
+                a {
+                    display: block;
+                    img {
+                        display: block;
+                        width: 114px;
+                        @include transition($transition);
+                    }
+                }
+            }
+        }
+    }
+}
+.footer-bottom {
+    padding: 27px 0;
+    p {
+        margin-bottom: 0;
+        font-weight: 600;
+        color: $title-color;
+        a {
+            color: $theme-color;
+            margin: 0 5px;
+        }
+    }
+}

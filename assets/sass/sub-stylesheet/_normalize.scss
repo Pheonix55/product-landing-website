@@ -1,0 +1,99 @@
+/*! @@@@@@@@@@@@@@@@@@@@@@
+Template Name: goster-dokan
+Template URI: https://themeforest.net/user/labartisan
+Author: LabArtisan
+Author URI: https://themeforest.net/user/labartisan
+Description: Description
+Version: 1.0.0
+Text Domain: goster-dokan
+Tags: bootstrap, Butcher, butcher shop, chicken, ecommerce, fish, meat, meat shop, mutton, online meat shop, products, restaurant, retail, Sea Food
+
+@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* @@@@@@@@@@@@@@@@@@@@@@
+>>> TABLE OF CONTENTS START:
+
+01. Normalize CSS
+02. Global CSS
+03. Header 
+	* Style-1
+	* Style-2
+	* Mobile Menu
+04. Banner 
+	* Style-1
+	* Style-2
+05. Page Header
+  	* Style-1
+06. About Section
+07. product-category-section
+08. product-section
+09. counterup-section
+10. awap-section
+11. contact-section
+12. faq-section
+13. newsletter-section
+14. Sponsor Section
+15. Newsletter Section
+16. testimonial-section
+17. sp-offer-section
+18. team-section
+19. gallery-section
+20. Fore Zero
+21. Blog
+	* Style-1
+	* Style-2
+	* Blog Single
+22. Widget
+23. Shop Page
+  * Shop Single
+  * cart Page
+
+
+
+>>> TABLE OF CONTENTS END:
+@@@@@@@@@@@@@@@@@@@@@@ */
+
+* {margin: 0;padding: 0;box-sizing: border-box; outline: none; box-shadow: none;}
+
+body {background: $white-color;color: $desc-color;font-family: $roboto;font-size: $fs-base;line-height: 1.5;}
+
+h1, h2, h3, h4, h5, h6 {color: $title-color; font-weight: 700;}
+a>h1, a>h2, a>h3, a>h4, a>h5, a>h6 {@include transition($transition);}
+h1 {font-size: $fs-h1;}
+
+h2 {font-size: $fs-h4;}
+
+h3 {font-size: $fs-h5;}
+
+h4 {font-size:$fs-h5;}
+
+h5 {font-size: $fs-h5;margin-top: -5px;}
+h6 {font-size: $fs-h6;}
+
+p {margin-bottom: 15px;font-weight: 400;font-size: $fs-base;color: $desc-color;line-height: 24px;}
+
+a {color: $title-color;@include transition($transition); display: inline-block;}
+
+a:hover, a:focus, a:active, a:visited {color: $title-color;text-decoration: none;outline: none;}
+
+img {height: auto;max-width: 100%;}
+
+@include breakpoint(sm) {
+	h1 {font-size: $fs-h1;}
+	
+	h2{font-size: $fs-h2;}
+	
+	h3 {font-size: $fs-h3;}
+	
+	h4 {font-size:$fs-h4;}
+	
+	h5 {font-size: $fs-h5;}
+	
+	h6 {font-size: $fs-h6;}
+}
+.lab-ul {
+	margin: 0;
+	li {
+		list-style: none;
+	}
+}

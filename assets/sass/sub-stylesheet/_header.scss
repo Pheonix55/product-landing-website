@@ -1,0 +1,191 @@
+// Header Section Start here
+.header-section {
+    @include breakpoint(max-xl) {
+        display: none;
+    }
+    .header-area.menu-fixed {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 99;
+        background: $white-color;
+        box-shadow: 0 0 3px rgba(81, 136, 136, .10);
+    }
+    .primary-menu {
+        @extend %flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            a {
+                display: block;
+                img {
+                    display: block;
+                }
+            }
+        }
+        .main-area {
+            @extend %flex;
+            align-items: center;
+            .main-menu {
+                ul {
+                    @extend %flex;
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        padding: 0;
+                        &.active, &:hover {
+                            > a {
+                                color: $theme-color;
+                            }
+                        }
+                        a {
+                            padding: 33px 20px;
+                            color: $title-color;
+                            font-size: $fs-base;
+                            @include transition($transition);
+                        }
+                        ul {
+                            @extend %abs;
+                            min-width: 200px;
+                            background: $theme-color;
+                            box-shadow: 0 0 5px rgba(136, 136, 136, .10);
+                            display: block;
+                            top: 100%;
+                            transform: scaleY(0);
+                            transform-origin: top;
+                            z-index: 999;
+                            @include transition($transition);
+                            li {
+                                a {
+                                    font-size: 98%;
+                                    padding: 10px 15px;
+                                    color: $white-color;
+                                    width: 100%;
+                                    border-bottom: 1px solid #ffffff40;
+                                    &:hover {
+                                        padding-left: 20px;
+                                        color: $theme-color;
+                                        background: $white-color;
+                                    }
+                                }
+                                &.active, &:hover {
+                                    > a {
+                                        background: $white-color;
+                                        color: $theme-color;
+                                    }
+                                }
+                                &:last-child {
+                                    a {
+                                        border-bottom: none;
+                                    }
+                                }
+                                &.menu-item-has-children {
+                                    margin-right: 0px;
+                                    a {
+                                        &::after {
+                                            right: 15px;
+                                            transform: translateY(-50%) rotate(-90deg);
+                                        }
+                                    }
+                                }
+                                ul {
+                                    left: 100%;
+                                    top: 0;
+                                }
+                            }
+                        }
+                        &.menu-item-has-children {
+                            margin-right: 16px;
+                            position: relative;
+                            >a {
+                                @extend %rel;
+                                &::after {
+                                    @extend %abs;
+                                    top: 50%;
+                                    right: 0;
+                                    transform: translateY(-50%);
+                                    font-weight: 400;
+                                    content: "\ea99" !important;
+                                    font-family: IcoFont !important;
+                                }
+                            }
+                        }
+                        &:hover{
+                            >ul {
+                                transform: scaleY(1);
+                            }
+                        }
+                    }
+                }
+            }
+            .header-btn {
+                margin-left: 15px;
+                .lab-btn {
+                    display: block;
+                    padding: 13px 30px;
+                }
+            }
+        }
+    }
+    .header-top {
+        padding: 10px 0;
+        .ht-left {
+            ul {
+                li {
+                    color: $white-color;
+                    font-size: 15px;
+                    font-weight: 500;
+                    padding-right: 15px;
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                    i {
+                        margin-right: 5px;
+                    }
+                    span {}
+                }
+            }
+        }
+        .ht-right {
+            .scocial-media {
+                margin-bottom: 0;
+                text-align: right;
+                a {
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    font-size: 18px;
+                    margin-bottom: 0;
+                    @include transition($transition);
+                    &:hover {
+                        color: $theme-color;
+                        background: $white-color;
+                    }
+                }
+            }
+        }
+        &.bg-black {
+            background: $title-color;
+        }
+    }
+}
+
+.transparent-header {
+    @extend %abs;
+    width: 100%;
+    top: 20px;
+    z-index: 999;
+    .primary-menu .main-area .main-menu ul li a {
+        color: $white-color;
+    }
+    .primary-menu .main-area .main-menu ul li ul {
+        background: $theme-color;
+    }
+    .search-cart li {
+        color: $white-color;
+        border-color: $white-color;
+    }
+}
+.transparent-header .header-area.menu-fixed {
+    background: $title-color;
+}

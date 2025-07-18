@@ -1,0 +1,578 @@
+/* @@@@@@@@@@@@@  about Section Start Here  @@@@@@@@@@@@@@ */
+.about-section {
+    background-position: right bottom;
+    .list-group-item {
+        background-color: transparent;
+    }
+    .about-thumb {
+        &.ab-images {
+            margin-bottom: 30px;
+            @include breakpoint(lg) {
+                margin-bottom: 0;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                img {
+                    max-width: none;
+                }
+            }
+        }
+    }
+    .about-wrapper {
+        padding: 60px 0;
+        @include breakpoint(lg) {
+            padding: 102px 0;
+        }
+        .about-title {
+            margin-bottom: 20px;
+            p {
+                max-width: 400px;
+            }
+        }
+    }
+    &.about-page {
+        .about-wrapper {
+            max-width: 500px;
+            @include breakpoint(max-lg) {
+                margin: 30px auto 0;
+            }
+            .about-title {
+                h6 {
+                    span {
+                        font-weight: 500;
+                    }
+                }
+            }
+            .about-content {
+                max-width: 450px;
+            }
+        }
+    }
+}
+
+/* @@@@@@@@@@@@@  product category Section Start Here  @@@@@@@@@@@@@@ */
+.product-category-section {
+    .section-wrapper {
+        margin-bottom: 10px;
+        .lab-ul {
+            @include breakpoint(max-lg) {
+                justify-content: center;
+                margin-bottom: 30px;
+            }
+            li {
+                border-bottom: 1px solid #e7e7e7;
+                @include breakpoint(max-lg) {
+                    display: inline-block;
+                    width: auto !important;
+                    border: none;
+                }
+                &:last-child {
+                    @include breakpoint(lg) {
+                        border-bottom: none;
+                    }
+                }
+                a {
+                    padding: 10px 0;
+                    @include breakpoint(max-lg) {
+                        padding: 7px 15px;
+                        border: 1px solid #e7e7e7;
+                        margin: 5px;
+                        border-radius: 5px;
+                    }
+                    img {
+                        @include breakpoint(max-lg) {
+                            display: none;
+                        }
+                    }
+                    &.active {
+                        @include breakpoint(max-lg) {
+                            border-color: $theme-color;
+                        }
+                        h6 {
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* @@@@@@@@@@@@@  product Section Start Here  @@@@@@@@@@@@@@ */
+.product-section {
+    .section-wrapper {
+        margin-bottom: 9px;
+        .card {
+            @include transition($transition);
+            &:hover {
+                box-shadow: 0 10px 10px rgba(136, 136, 136, .10);
+                background: $white-color;
+                @include transform(translateY(-5px));
+            }
+            .card-body {
+                .card-title {
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* @@@@@@@@@@@@@  Newsletter Section Start Here  @@@@@@@@@@@@@@ */
+.counterup-section {
+    .section-wrapper {
+        margin-bottom: -10px;
+        .col-12 {
+            &:last-child {
+                .counter-item {
+                    .counter-inner {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            &:nth-child(2) {
+                @include breakpoint(sm) {
+                    @include breakpoint(max-xl) {
+                        .counter-item {
+                            .counter-inner {
+                                &::after {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .counter-item {
+            .counter-inner {
+                @extend %rel;
+                &::after {
+                    @extend %abs;
+                    top: 0;
+                    right: 0;
+                    width: 1px;
+                    height: 100%;
+                    background: $theme-color;
+                    display: none;
+                    @include breakpoint(sm) {
+                        display: block;
+                    }
+                }
+                .counter-thumb {
+                    img {}
+                }
+                .counter-content {
+                    .count-number {}
+                    .count-title { }
+                }
+            }
+        }
+    }
+}
+
+/* @@@@@@@@@@@@@  awap Section Start Here  @@@@@@@@@@@@@@ */
+.awap-section {
+    .section-wrapper {
+        .awap-top {
+            margin-bottom: 60px;
+            @include breakpoint(lg) {
+                margin-bottom: 90px;
+            }
+        }
+        .awap-thumb {
+            margin-bottom: 15px;
+        }
+        .awap-content {
+            max-width: 520px;
+            h3 {
+                @include breakpoint(xl) {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+/* @@@@@@@@@@@@@  Contact Us Section Start Here  @@@@@@@@@@@@@@ */
+.contact-section {
+    .contac-top {
+        margin-bottom: 60px;
+    }
+    .contac-bottom {
+        margin-bottom: 15px;
+    }
+}
+.location-map {
+    @include breakpoint(max-lg) {
+        margin-bottom: 15px;
+    }
+    #map {
+        height: 435px;
+        width: 100%;
+        iframe {
+            height: 100%;
+            width: 100%;
+            border: none;
+        }
+    }
+}
+.contact-form {
+    form {
+        &.comment-form {
+            @extend %flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 0;
+            input[type="text"], [type="email"] {
+                padding: 10px 15px;
+                border: 1px solid $border-color;
+                background: $white-color;
+                width: 100%;
+                margin-bottom: 15px;
+                @include breakpoint(sm) {
+                    width: calc(100% / 2 - 10px);
+                }
+                &:nth-child(3) {
+                    @include breakpoint(md) {
+                        width: 100% !important;
+                        margin-right: 0;
+                    }
+                }
+            }
+            textarea {
+                background: $white-color;
+                border: 1px solid $border-color;
+                width: 100%;
+                padding: 10px 15px;
+            }
+            button {
+                &.lab-btn {
+                    width: 100%;
+                    margin-top: 15px;
+                    padding: 10px 15px;
+                    color: $white-color;
+                    background: $theme-color;
+                    outline: none;
+                    border: none;
+                    @include border-radius(3px);
+                    box-shadow: 0 5px 5px rgba(255, 177, 31, .25);
+                    @extend %pointer;
+                    &:hover {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* @@@@@@@@@@@@@  Faq Section Start Here  @@@@@@@@@@@@@@ */
+.faq-section {
+    .faq-tab {
+        padding: 30px;
+        background: $white-color;
+        box-shadow: 0 5px 5px rgba(81, 70, 174, .15);
+        @include breakpoint(max-lg) {
+            margin-bottom: 30px;
+        }
+        > h5 {
+            margin-bottom: 15px;
+        }
+        ul {
+            li {
+                width: 100%;
+                a {
+                    padding: 5px 0;
+                    color: #716c80;
+                    font-size: 16px;
+                    &.active {
+                        color: $theme-color;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .faq-content {
+        margin-bottom: -10px;
+        .tab-pane {
+            > h5 {
+                color: $theme-color;
+                margin-bottom: 15px;
+                text-decoration: underline;
+            }
+            .card {
+                margin-bottom: 25px;
+                border: none;
+                box-shadow: 0 3px 3px rgba(81, 70, 174, .15);
+            }
+            .card-header {
+                background: $white-color;
+                border: none;
+                padding: 0;
+                @extend %pointer;
+                .faq-item {
+                    padding: 20px 30px;
+                    border: none;
+                    width: 100%;
+                    text-align: left;
+                    outline: none;
+                    background: #fdfeff;
+                    @extend %pointer;
+                    @extend %rel;
+                    font-size: 16px;
+                    @include breakpoint(sm) {
+                        font-size: 20px;
+                    }
+                    &::after, &::before {
+                        @extend %abs;
+                        background: $title-color;
+                        right: 20px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    &::after {
+                        width: 20px;
+                        height: 2px;
+                    }
+                    &.collapsed {
+                        &::before {
+                            width: 2px;
+                            height: 20px;
+                            right: 29px;
+                        }
+                    }
+                }
+            }
+            .card-body {
+                background: #fdfeff;
+                padding-top: 0px;
+                padding-left: 30px;
+                padding-right: 30px;
+                p {}
+            }
+        }
+    }
+}
+
+/* @@@@@@@@@@@@@  Newsletter  Section Start Here  @@@@@@@@@@@@@@ */
+.newsletter-section {
+    padding: 60px 0;
+    .newsletter-form {
+        .news-title {
+            h4 {
+                span {
+                    font-weight: 400;
+                    color: #505050;
+                }
+            }
+        }
+        form {
+            background: $white-color;
+            padding: 10px;
+            margin-bottom: 9px;
+            @include border-radius(50px);
+            box-shadow: 0 5px 5px rgb(218, 221, 225);
+            @extend %rel;
+            &:after {
+                @extend %abs;
+                width: 24px;
+                height: 24px;
+                line-height: 24px;
+                font-size: 20px;
+                top: 50%;
+                left: 15px;
+                content: "\ef14" !important;
+                font-family: IcoFont!important;
+                @include transform(translateY(-50%));
+            }
+        }
+        input {
+            height: 40px;
+            border: none;
+            &.input-email {
+                width: calc(100% - 130px);
+                padding: 15px;
+                padding-left: 35px;
+                margin-right: 10px;
+            }
+            &.subscribe-btn {
+                width: 120px;
+                padding: 0 15px;
+                color: $white-color;
+                background: $theme-color;
+                @extend %pointer;
+                @include border-radius(50px);
+            }
+        }
+    }
+}
+
+/* @@@@@@@@@@@@@  sponsor Section Start Here  @@@@@@@@@@@@@@ */
+.sponsor-section {
+    .section-wrapper {
+        margin-bottom: 15px;
+        .sponsor-slider {
+            @extend %hidden;
+            text-align: center;
+        }
+    }
+}
+
+/* @@@@@@@@@@@@@  testimonial Section Start Here  @@@@@@@@@@@@@@ */
+.testimonial-section {
+    .section-header {
+        margin-bottom: 30px;
+    }
+    .testi-slider {
+        @extend %hidden;
+        .testi-item {
+            margin: 10px;
+            .testi-inner {
+                box-shadow: 0 0 10px rgba(136, 136, 136, .10);
+                padding: 30px;
+                @include border-radius(6px);
+            }
+        }
+    }
+    .section-wrapper {
+        @extend %rel;
+        &:hover {
+            .testi-navigation {
+                opacity: 1;
+            }
+        }
+    }
+    .testi-navigation {
+        @extend %abs;
+        top: 50%;
+        width: 70%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        @include transition($transition);
+        @include breakpoint(max-lg) {
+            display: none !important;
+        }
+        .testi-nav {
+            @extend %abs;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            background: $ash-color;
+            color: $title-color;
+            margin-right: 10px;
+            @extend %pointer;
+            @include border-radius(100%);
+            &:hover, &.active {
+                color: $white-color;
+                background: $theme-color;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            &.testi-slider-prev {
+                left: -20px;
+            }
+            &.testi-slider-next {
+                right: -20px;
+            }
+        }
+    }
+    .testi-pagination {
+        margin-top: 15px;
+        span {
+            background: $white-color;
+            margin: 2px;
+            border: 2px solid $theme-color;
+            opacity: 1;
+            width: 12px;
+            height: 12px;
+            &.swiper-pagination-bullet-active {
+                background: $theme-color;
+            }
+        }
+    }
+}
+
+/* @@@@@@@@@@@@@  Sp-offer Section Start Here  @@@@@@@@@@@@@@ */
+.sp-offer-section {
+    .section-wrapper {
+        margin-bottom: -10px;
+    }
+}
+
+/* @@@@@@@@@@@@@  Team Section Start Here  @@@@@@@@@@@@@@ */
+.team-section {
+    .section-wrapper {
+        margin-bottom: -7px;
+    }
+    .card {
+        @include transition($transition);
+        box-shadow: 0 0 6px rgba(8, 136, 136, .08);
+        &:hover {
+            @include transform(translateY(-5px));
+            box-shadow: 0 10px 10px rgba(136, 136, 136, .10);
+        }
+        &.style-2 {
+            padding: 30px 0 10px;
+            img {
+                width: 210px;
+                height: 210px;
+                margin: 0 auto;
+                @include border-radius(100%);
+            }
+        }
+        h6 {
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+/* @@@@@@@@@@@@@  gallery Section Start Here  @@@@@@@@@@@@@@ */
+.gallery-section {
+    .section-wrapper {
+        margin-bottom: -10px;
+        .gallery-item {
+            margin-bottom: 25px;
+            .gallery-thumb {
+                @extend %hidden;
+                &:hover {
+                    img {
+                        @include transform(scale(1.05));
+                    }
+                }
+                img {
+                    @include transition($transition);
+                }
+            }
+        }
+    }
+}
+
+/* @@@@@@@@@@@@@  404 page Section Start Here  @@@@@@@@@@@@@@ */
+.fore-zero {
+    .section-wrapper {
+        .zero-item {
+            h2 {
+                line-height: 1.4;
+                margin-bottom: 0;
+                font-weight: 400;
+            }
+            .zero-thumb {
+                margin-bottom: 40px;
+            }
+            .lab-btn {
+                @include border-radius(3px);
+            }
+        }
+    }
+}

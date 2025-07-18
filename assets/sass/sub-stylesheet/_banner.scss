@@ -1,0 +1,180 @@
+/* @@@@@@@@@@@@@  Banner Section Start Here  @@@@@@@@@@@@@@ */
+.banner {
+    @extend %rel;
+    @extend %hidden;
+    .banner-slider {
+        @extend %hidden;
+        @extend %rel;
+        &:hover {
+            .banner-nav {
+                &.banner-next {
+                    left: 0;
+                }
+                &.banner-prev {
+                    right: 0;
+                }
+            }
+        }
+        .banner-nav {
+            @extend %abs;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: $theme-color;
+            z-index: 1;
+            top: 50%;
+            font-size: 24px;
+            font-weight: 700;
+            background: $white-color;
+            @extend %pointer;
+            @include border-radius(3px);
+            @include transition($transition);
+            @include transform(translateY(-50%));
+            &:hover {
+                color: $white-color;
+                background: $theme-color;
+            }
+            &.banner-next {
+                left: -20%;
+                padding-right: 2px;
+            }
+            &.banner-prev {
+                right: -20%;
+            }
+        }
+    }
+    .banner-slider-part {
+        background-size: cover !important;
+        background-position: top left !important;
+        @include breakpoint(lg) {
+            background-position: center !important;
+        }
+        .banner-thumb {
+            opacity: 0;
+            @include transition(all 3s ease);
+            @include breakpoint(max-xl) {
+                display: none;
+            }
+        }
+        .banner-content {
+            @include breakpoint(max-xl) {
+                padding: 180px 0 100px;
+                text-align: center;
+            }
+            h3 {
+                color: $white-color;
+                @include breakpoint(max-sm) {
+                    font-size: 36px;
+                }
+            }
+            .banner-desc {
+                max-width: 750px;
+                margin: 0 auto 40px;
+                color: $white-color;
+                line-height: $lh-p;
+                @include breakpoint(sm) {
+                    font-size: 18px;
+                }
+            }
+            .bt-thumb {
+                @include transform(translateY(-350px));
+                @include transition(all .6s ease);
+            }
+            .banner-title {
+                @include transform(translateY(-350px));
+                @include transition(all .3s ease);
+            }
+            .banner-desc {
+                @include transform(translateY(350px));
+                @include transition(all .7s ease);
+            }
+            .lab-btn {
+                @include transform(translateY(350px));
+                @include transition(all .9s ease);
+            }
+        }
+    }
+    .swiper-slide-active {
+        .banner-thumb {
+            opacity: 1;
+        }
+        .banner-slider-part {
+            .banner-content {
+                .bt-thumb {
+                    @include transform(translateY(0px));
+                }
+                .banner-title {
+                    @include transform(translateY(0px));
+                }
+                .banner-desc {
+                    @include transform(translateY(0px));
+                }
+                .lab-btn {
+                    @include transform(translateY(0px));
+                }
+            }
+        }
+    }
+    &.home-2 {
+        .banner-slider-part {
+            .banner-content {
+                padding: 180px 0 100px;
+                text-align: center;
+                h3 {
+                    font-weight: 400;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+
+/* @@@@@@@@@@@@@  Page Header Section Start Here  @@@@@@@@@@@@@@ */
+.page-header {
+    @extend %rel;
+    margin-top: 82px;
+    background: url(../../assets/images/bg-images/page-header.jpg);
+    @include breakpoint(xl) {
+        margin-top: 0;
+    }
+    .page-header-content-area {
+        @extend %rel;
+        z-index: 1;
+        margin-bottom: 15px;
+        .ph-title {
+            text-align: center;
+            color: $white-color;
+        }
+        ul {
+            @extend %flex;
+            justify-content: center;
+            li {
+                padding-right: 15px;
+                &:last-child {
+                    padding-right: 0;
+                }
+                a {
+                    @extend %rel;
+                    color: $white-color;
+                    &::after {
+                        @extend %abs;
+                        width: 1px;
+                        height: 15px;
+                        top: 4px;
+                        right: -9px;
+                        background: $white-color;
+                        transform: rotate(20deg);
+                    }
+                    &.active {
+                        color: $theme-color;
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
