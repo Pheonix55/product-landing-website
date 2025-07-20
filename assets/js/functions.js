@@ -278,6 +278,28 @@
         
         // wow animation
         new WOW().init();
+        
     });
+function setActiveMenu() {
+    var currentPage = window.location.pathname.split("/").pop();
+    var isMobile = $(window).width() < 1200;
+    var menuSelector = isMobile ? '.mobile-menu a' : '.main-menu a';
+
+    $('.main-menu li, .mobile-menu li').removeClass('active');
+
+    $(menuSelector).each(function () {
+        var linkPage = $(this).attr('href');
+        if (linkPage === currentPage) {
+            $(this).closest('li').addClass('active');
+        }
+    });
+}
+
+setActiveMenu();
+
+$(window).on('resize', setActiveMenu);
+
 }(jQuery));
+ 
+
 

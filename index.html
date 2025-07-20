@@ -53,16 +53,18 @@
         <div class="mobile-menu-area-inner">
           <ul class="lab-ul">
             <li class="active">
-              <a href="#0">Home</a>
-              <ul class="lab-ul">
+              <a href="index.html">Home</a>
+              <!-- <ul class="lab-ul">
                 <li class="active"><a href="index.html">Home Page One</a></li>
                 <li><a href="index-2.html">Home Page Two</a></li>
-              </ul>
+              </ul> -->
             </li>
             <li><a href="about.html">About</a></li>
             <li>
               <a href="#0">Pages</a>
               <ul class="lab-ul">
+                <li><a href="our-locations.html">Our Locations</a></li>
+                <li><a href="export.html">Export</a></li>
                 <li><a href="team.html">Team Member</a></li>
                 <li><a href="faq-page.html">Faq Page</a></li>
                 <li><a href="404.html">404 Page</a></li>
@@ -135,20 +137,21 @@
             <div class="main-area">
               <div class="main-menu d-flex flex-wrap align-items-center justify-content-center w-100">
                 <ul class="lab-ul">
-                  <li class="active">
-                    <a href="#0">Home</a>
-                    <ul class="lab-ul">
+                  <li class="">
+                    <a href="index.html">Home</a>
+                    <!-- <ul class="lab-ul">
                       <li class="active">
                         <a href="index.html">Home Page One</a>
                       </li>
                       <li><a href="index-2.html">Home Page Two</a></li>
-                    </ul>
+                    </ul> -->
                   </li>
                   <li><a href="about.html">About</a></li>
                   <li>
                     <a href="#0">Pages</a>
                     <ul class="lab-ul">
                       <li><a href="team.html">Team Member</a></li>
+                      <li><a href="our-locations.html">Our Locations</a></li>
                       <li><a href="export.html">Export</a></li>
                       <li><a href="faq-page.html">Faq Page</a></li>
                       <li><a href="404.html">404 Page</a></li>
@@ -1285,6 +1288,29 @@
   <script src="assets/js/isotope.pkgd.min.js"></script>
   <script src="assets/js/lightcase.js"></script>
   <script src="assets/js/functions.js"></script>
+
+  <script>
+    const currentPage = window.location.pathname.split("/").pop();
+
+    const isMobile = window.innerWidth < 1200;
+
+    const menuSelector = isMobile ? '.mobile-menu a' : '.main-menu a';
+
+    document.querySelectorAll('.main-menu li, .mobile-menu li').forEach(item => {
+      item.classList.remove('active');
+    });
+
+    document.querySelectorAll(menuSelector).forEach(link => {
+      const linkPage = link.getAttribute("href");
+      if (linkPage === currentPage) {
+        const li = link.closest("li");
+        if (li) li.classList.add("active");
+      }
+    });
+  </script>
+
+
+
 </body>
 
 </html>
