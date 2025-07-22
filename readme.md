@@ -6,7 +6,7 @@ This is a static website for **FishMart**, a premium seafood supplier offering p
 
 ## 🌐 Live Demo
 
-🔗 [https://your-site-name.netlify.app](https://your-site-name.netlify.app)  
+🔗 [https://pheonix55.github.io/product-landing-website/](https://pheonix55.github.io/product-landing-website/)  
 > Replace with your actual Netlify URL after deployment.
 
 ---
