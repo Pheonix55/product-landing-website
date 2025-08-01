@@ -5676,3 +5676,41 @@ img {
     flex-direction: column !important;
   }
 }
+.clr-theme {
+  color: #ef5350 !important;
+}
+
+/* Container row (ensure Flexbox wraps correctly) */
+#product-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Make all cards the same height */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* makes it fill its column */
+  min-height: 350px; /* adjust based on your needs */
+  box-sizing: border-box;
+}
+
+/* Ensure image doesn’t stretch awkwardly */
+.product-card img {
+  max-height: 150px;
+  object-fit: contain;
+}
+
+/* Optional: stretch the card-body to push content to the bottom */
+.product-card .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.center-aligned {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  gap: 6em;
+}
