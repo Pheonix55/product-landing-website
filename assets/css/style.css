@@ -5679,7 +5679,19 @@ img {
 .clr-theme {
   color: #ef5350 !important;
 }
+.center-aligned {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  gap: 6em;
+}
 
+@media (max-width: 769px) {
+  .center-aligned {
+    flex-direction: column !important;
+    gap: 0.5em !important;
+  }
+}
 /* Container row (ensure Flexbox wraps correctly) */
 #product-list {
   display: flex;
@@ -5708,12 +5720,7 @@ img {
   flex-direction: column;
   justify-content: flex-end;
 }
-.center-aligned {
-  display: inline-flex;
-  justify-content: center;
-  width: 100%;
-  gap: 6em;
-}
+
 /* loader */
 .hidden {
   display: none !important;

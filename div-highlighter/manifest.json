@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Div Highlighter",
+  "version": "1.0",
+  "description": "Toggle borders around all div elements for debugging.",
+ "action": {
+  "default_title": "Toggle Div Borders"
+},
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["scripting", "activeTab"]
+}
