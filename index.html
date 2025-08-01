@@ -22,6 +22,10 @@
 </head>
 
 <body>
+  <div id="global-loader">
+    <div class="loader"></div>
+  </div>
+
   <!--search area-->
   <div class="search-input">
     <div class="search-close">
@@ -1346,7 +1350,17 @@
       container.appendChild(col);
     });
   </script>
+  <script>
 
+    const loader = document.getElementById('global-loader');
+
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        loader.classList.add('hidden');
+      }, 1000);
+    });
+
+  </script>
 </body>
 
 </html>
