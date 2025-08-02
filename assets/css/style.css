@@ -322,6 +322,8 @@ img {
   .ml-about-thumb {
     margin-left: -75px;
   }
+
+
 }
 
 .border-none {
@@ -378,6 +380,10 @@ img {
 }
 
 @media (max-width: 1199px) {
+  .header-logo a img {
+    height: 60px !important;
+  }
+
   .shape-images {
     display: none;
   }
@@ -2275,7 +2281,10 @@ img {
 
 .header-section .primary-menu .logo a img {
   display: block;
+  height: 70px;
+  width: 100%;
 }
+
 
 .header-section .primary-menu .main-area {
   align-items: center;
@@ -2897,6 +2906,30 @@ img {
   background-size: cover !important;
 }
 
+.location-page-header {
+  /* margin-top: 82px; */
+  background: url(../../assets/images/about/hero2.jpg) !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.export-page-header {
+  /* margin-top: 82px; */
+  background: url(../../assets/images/about/hero3.jpg) !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.faq-page-header {
+  /* margin-top: 82px; */
+  background: url(../../assets/images/about/hero4.jpg) !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
 .about-thumb {
   height: 90%;
   width: 95%;
@@ -3510,7 +3543,8 @@ img {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  box-shadow: 0 0 6px rgba(8, 136, 136, 0.08);
+  /* box-shadow: 0 0 6px rgba(8, 136, 136, 0.08); */
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 .team-section .card:hover {
@@ -5342,6 +5376,11 @@ img {
 
 .footer-top .post-item .footer-logo {
   margin-bottom: 32px;
+}
+
+.footer-top .post-item .footer-logo img {
+  height: 80px;
+
 }
 
 .footer-top .post-item .footer-location li {
