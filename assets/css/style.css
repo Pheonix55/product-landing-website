@@ -143,6 +143,32 @@ img {
   max-width: 100%;
 }
 
+@media (max-width: 576px) {
+  h1 {
+    font-size: 52px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  h6 {
+    font-size: 14px;
+  }
+}
+
 @media (min-width: 576px) {
   h1 {
     font-size: 72px;
@@ -380,6 +406,14 @@ img {
 }
 
 @media (max-width: 1199px) {
+  .space-above {
+    margin-top: 20px !important;
+  }
+
+  .awap-section .section-wrapper .awap-top {
+    margin-bottom: 20px !important;
+  }
+
   .header-logo a img {
     height: 60px !important;
   }
@@ -2524,6 +2558,15 @@ img {
   transition: all 0.3s ease;
 }
 
+.transparent-header .mobile-header .header-bar span {
+  background-color: #000 !important;
+}
+
+/* mobile-header animated fadeInDown menu-fixed */
+.transparent-header .mobile-header.animated.fadeInDown.menu-fixed .header-bar span {
+  background-color: #fff !important;
+}
+
 .mobile-menu .mobile-header .header-bar span:nth-child(1) {
   margin-top: -9px;
 }
@@ -2801,7 +2844,7 @@ img {
 
 @media (max-width: 575px) {
   .banner .banner-slider-part .banner-content h3 {
-    font-size: 36px;
+    font-size: 28px;
   }
 }
 
@@ -2996,6 +3039,10 @@ img {
 /* @@@@@@@@@@@@@  about Section Start Here  @@@@@@@@@@@@@@ */
 .about-section {
   background-position: right bottom;
+}
+
+.about-section .container {
+  padding-top: 15px;
 }
 
 .about-section .list-group-item {
@@ -5498,6 +5545,8 @@ img {
 .h-fit {
   height: fit-content !important;
   flex: 0 0 50% !important;
+  display: flex;
+  justify-content: center;
 }
 
 .small-card {
@@ -5658,3 +5707,9 @@ img {
     transform: scale(1.2, 1);
   }
 }
+
+.relative {
+  position: relative;
+}
+
+.relative .hero-text {}

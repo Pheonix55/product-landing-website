@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tahama | Achievements & Certifications</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap"
+        rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/01.png" />
+
+
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/icofont.min.css" />
+    <link rel="stylesheet" href="assets/css/lightcase.css" />
+    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: #f4f4f4;
+        }
+
+        .gallery-container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.4s ease;
+        } */
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            /* Or whatever height fits your layout */
+            object-fit: cover;
+            transition: transform 0.4s ease;
+            display: block;
+            border-radius: 10px;
+        }
+
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.65);
+            color: #ccc;
+            padding: 15px;
+            opacity: 0;
+            transition: 0.3s ease;
+        }
+
+        .overlay p {
+            color: #ccc;
+        }
+
+        .overlay h5 {
+            color: #ef5350;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+
+        .modal-content img {
+            object-fit: contain;
+            height: 90vh;
+            border-radius: 10px;
+            zoom: -1;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #fff;
+            color: #000;
+            font-size: 24px;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .cert-card img {
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            object-fit: cover;
+            height: 250px;
+            width: 100%;
+            filter: grayscale(1);
+        }
+
+        .cert-card img:hover {
+            transform: scale(1.05);
+            filter: none;
+        }
+
+        .modal-img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+
+        .spacing {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--search area-->
+    <div class="search-input">
+        <div class="search-close">
+            <i class="icofont-close-circled"></i>
+        </div>
+        <form>
+            <input type="text" name="text" placeholder="Search Here" />
+            <button class="search-btn" type="submit">
+                <i class="icofont-search-2"></i>
+            </button>
+        </form>
+    </div>
+    <!-- search area -->
+
+    <!-- Mobile Menu Start Here -->
+    <div class="mobile-menu transparent-header">
+        <nav class="mobile-header">
+            <div class="header-logo">
+                <a href="index.html" id="dark-logo"><img src="assets/images/logo/01.png" alt="logo" /></a>
+                <a class="hidden" href="index.html" id="light-logo"><img src="assets/images/logo/logo-light.png"
+                        alt="logo" /></a>
+            </div>
+            <div class="header-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <nav class="mobile-menu">
+            <div class="mobile-menu-area">
+                <div class="mobile-menu-area-inner">
+                    <ul class="lab-ul">
+                        <li class="active">
+                            <a href="index.html">Home</a>
+                            <!-- <ul class="lab-ul">
+                <li class="active"><a href="index.html">Home Page One</a></li>
+                <li><a href="index-2.html">Home Page Two</a></li>
+              </ul> -->
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <!-- <li>
+              <a href="#0">Pages</a>
+              <ul class="lab-ul">-->
+                        <li><a href="our-locations.html">Our Locations</a></li>
+                        <li><a href="export.html">Export</a></li>
+                        <!-- <li><a href="team.html">Team Member</a></li> -->
+                        <li><a href="certification.html">Our Achievements & Certifications</a></li>
+                        <li><a href="faq-page.html">Faq Page</a></li>
+                        <!-- <li><a href="404.html">404 Page</a></li> -->
+                        <!-- </ul>
+            </li> -->
+                        <!-- <li>
+              <a href="#0">Blog</a>
+              <ul class="lab-ul">
+                <li><a href="blog.html">Blog Right Sidebar</a></li>
+                <li><a href="blog-ls.html">Blog left Sidebar</a></li>
+                <li><a href="blog-single.html">Blog Details</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#0">Shop</a>
+              <ul class="lab-ul">
+                <li><a href="product-page.html">Products Page</a></li>
+                <li><a href="product-single.html">Products Details</a></li>
+                <li><a href="cart-page.html">Cart Page</a></li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Mobile Menu Ending Here -->
+
+    <!-- desktop menu start here -->
+    <header class="header-section">
+        <!-- <div class="header-top bg-theme">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+           <div class="col-lg-7 col-12">
+            <div class="ht-left">
+              <ul class="lab-ul d-flex flex-wrap">
+                <li>
+                  <i class="icofont-envelope"></i><span>Tahama@gmail.com</span>
+                </li>
+                <li>
+                  <i class="icofont-phone"></i><span>+88130-589-745-6987</span>
+                </li>
+                <li>
+                  <i class="icofont-stopwatch"></i><span>Mon - Fri 09:00 - 18:00</span>
+                </li>
+              </ul>
+            </div>
+          </div> 
+          <div class="col-lg-5 col-12">
+            <div class="ht-right">
+              <div class="scocial-media">
+                <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+                <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+                <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+                <a href="#" class="vimeo"><i class="icofont-vimeo"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+        <div class="header-bottom">
+            <div class="header-area">
+                <div class="container">
+                    <div class="primary-menu">
+                        <div class="logo py-2">
+                            <a href="index.html"><img src="assets/images/logo/01.png" alt="logo" /></a>
+                        </div>
+                        <div class="main-area">
+                            <div class="main-menu d-flex flex-wrap align-items-center justify-content-center w-100">
+                                <ul class="lab-ul">
+                                    <li class="active">
+                                        <a href="index.html">Home</a>
+                                        <!-- <ul class="lab-ul">
+                      <li class="active">
+                        <a href="index.html">Home Page One</a>
+                      </li>
+                      <li><a href="index-2.html">Home Page Two</a></li>
+                    </ul> -->
+                                    </li>
+                                    <li><a href="about.html">About</a></li>
+                                    <!-- <li>
+                    <a href="#0">Pages</a>
+                    <ul class="lab-ul"> -->
+                                    <!-- <li><a href="team.html">Team Member</a></li> -->
+                                    <li><a href="our-locations.html">Our Locations</a></li>
+                                    <li><a href="export.html">Export</a></li>
+                                    <li><a href="certification.html">Our Achievements & Certifications</a></li>
+                                    <li><a href="faq-page.html">Faq Page</a></li>
+                                    <!-- <li><a href="404.html">404 Page</a></li> -->
+                                    <!-- </ul>
+                  </li>
+                  <li> -->
+                                    <!-- <a href="#0">Blog</a>
+                  <ul class="lab-ul">
+                    <li><a href="blog.html">Blog Right Sidebar</a></li>
+                    <li><a href="blog-ls.html">Blog left Sidebar</a></li>
+                    <li><a href="blog-single.html">Blog Details</a></li>
+                  </ul>
+                  </li>
+                  <li>
+                    <a href="#0">Shop</a>
+                    <ul class="lab-ul">
+                      <li><a href="product-page.html">Products Page</a></li>
+                      <li>
+                        <a href="product-single.html">Products Details</a>
+                      </li>
+                      <li><a href="cart-page.html">Cart Page</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="contact.html">Contact</a></li> -->
+                                </ul>
+                                <!-- <ul class="lab-ul search-cart">
+                  <li>
+                    <div class="cart-option">
+                      <i class="icofont-cart-alt"></i>
+                      <div class="cart-content">
+                        <div class="cart-item">
+                          <div class="cart-img">
+                            <a href="#"><img src="assets/images/shop/01.jpg" alt="cart" /></a>
+                          </div>
+                          <div class="cart-des">
+                            <a href="#">Product Title Here</a>
+                            <p>$20.00</p>
+                          </div>
+                          <div class="cart-btn">
+                            <a href="#"><i class="icofont-close-circled"></i></a>
+                          </div>
+                        </div>
+                        <div class="cart-item">
+                          <div class="cart-img">
+                            <a href="#"><img src="assets/images/shop/02.jpg" alt="cart" /></a>
+                          </div>
+                          <div class="cart-des">
+                            <a href="#">Product Title Hore</a>
+                            <p>$20.00</p>
+                          </div>
+                          <div class="cart-btn">
+                            <a href="#"><i class="icofont-close-circled"></i></a>
+                          </div>
+                        </div>
+                        <div class="cart-bottom">
+                          <div class="cart-subtotal">
+                            <p>Total: <b class="float-right">$40.00</b></p>
+                          </div>
+                          <div class="cart-action">
+                            <a href="#" class="lab-btn"><span>View Cart</span></a>
+                            <a href="#" class="lab-btn"><span>Check Out</span></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="search-option">
+                      <i class="icofont-search-2"></i>
+                    </div>
+                  </li>
+                </ul> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header Section Start Here -->
+    <section class="about-page-header page-header bg_img padding-tb">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="page-header-content-area">
+                <h4 class="ph-title">Tahama About us</h4>
+                <ul class="lab-ul">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Page Header Section Ending Here -->
+
+    <!-- about section start here -->
+    <section class="about-section about-page relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="about-thumb ab-images">
+                        <img src="assets/images/certifications/hero.png" alt="about-thumb" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="about-wrapper">
+                        <div class="about-title">
+                            <h3>Our Achievements & Certifications</h3>
+                            <h6>
+                                <span>Decades of Excellence in Global Seafood Trade</span>
+                            </h6>
+
+                        </div>
+                        <div class="about-content">
+                            <p>
+                                Since 1986, Tahama has continuously surpassed industry benchmarks—earning global
+                                recognition, awards, and certifications that reflect our commitment to quality,
+                                sustainability, and customer satisfaction.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about section ending here -->
+    <section>
+        <div class="gallery-container">
+            <h3 style="text-align: center; margin-bottom: 30px;">Our Achievements</h3>
+            <div class="gallery-grid">
+
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item" onclick="openModal('assets/images/certifications/cert-1.png')">
+                    <img src="assets/images/certifications/cert-1.png" alt="Global Seafood Expo Dubai">
+                    <div class="overlay">
+                        <h5>TAHAMA’S SEA FOOD EXPO PARTICIPATIONS</h5>
+                        <p>SeaFare international 1991.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal('assets/images/certifications/cert-2.png')">
+                    <img src="assets/images/certifications/cert-2.png" alt="HACCP Certificate">
+                    <div class="overlay">
+                        <h5>CBI News Bulletin May 1994</h5>
+                        <p>TAHAMA WAS SELECTED BY CBI & TAHAMA PARTICIPATED
+                            AT EUROPEAN SEAFOOD EXPOSITION IN 1994 HELD IN
+                            BRUSSELS</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('assets/images/certifications/cert-3.png')">
+                    <img src="assets/images/certifications/cert-3.png" alt="HACCP Certificate">
+                    <div class="overlay">
+                        <h5>Document showing</h5>
+                        <p>TAHAMA WAS REGISTERED BY NETHERLANDS (EUROPE)
+                            FOR EXPORT OF SHRIMPS IN 1994</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('assets/images/certifications/cert-4.png')">
+                    <img src="assets/images/certifications/cert-4.png" alt="HACCP Certificate">
+                    <div class="overlay">
+                        <h5>CBI News Bulletin May 1994</h5>
+                        <p>TAHAMA WAS SELECTED BY CBI & TAHAMA PARTICIPATED
+                            AT EUROPEAN SEAFOOD EXPOSITION IN 1994 HELD IN
+                            BRUSSELS</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('assets/images/certifications/cert-5.png')">
+                    <img src="assets/images/certifications/cert-5.png" alt="HACCP Certificate">
+                    <div class="overlay">
+                        <h5>CBI News Bulletin May 1994</h5>
+                        <p>TAHAMA WAS SELECTED BY CBI & TAHAMA PARTICIPATED
+                            AT EUROPEAN SEAFOOD EXPOSITION IN 1994 HELD IN
+                            BRUSSELS</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <section class="certifications py-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h3 class="section-title">Our Certifications</h3>
+                <p class="section-subtitle">We are globally recognized for quality and compliance.</p>
+            </div>
+            <div class="row g-4 gap">
+                <!-- Certification Card -->
+                <div class="col-sm-6 col-md-4 spacing">
+                    <div class="cert-card">
+                        <img src="assets/images/certifications/pdfs/01.png" class="img-fluid cert-img"
+                            alt="ISO Certification" data-bs-toggle="modal" data-bs-target="#certModal"
+                            data-src="assets/images/certifications/pdfs/01.png">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 spacing">
+                    <div class="cert-card">
+                        <img src="assets/images/certifications/pdfs/02.png" class="img-fluid cert-img"
+                            alt="HACCP Certification" data-bs-toggle="modal" data-bs-target="#certModal"
+                            data-src="assets/images/certifications/pdfs/02.png">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 spacing">
+                    <div class="cert-card">
+                        <img src="assets/images/certifications/pdfs/03.png" class="img-fluid cert-img"
+                            alt="HACCP Certification" data-bs-toggle="modal" data-bs-target="#certModal"
+                            data-src="assets/images/certifications/pdfs/03.png">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 spacing">
+                    <div class="cert-card">
+                        <img src="assets/images/certifications/pdfs/04.png" class="img-fluid cert-img"
+                            alt="HACCP Certification" data-bs-toggle="modal" data-bs-target="#certModal"
+                            data-src="assets/images/certifications/pdfs/04.png">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 spacing">
+                    <div class="cert-card">
+                        <img src="assets/images/certifications/pdfs/05.png" class="img-fluid cert-img"
+                            alt="HACCP Certification" data-bs-toggle="modal" data-bs-target="#certModal"
+                            data-src="assets/images/certifications/pdfs/05.png">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Modal for Full View -->
+        <div class="modal fade" id="certModal" tabindex="-1" onclick="closeModal(this, true)">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body p-0">
+                        <img src="" alt="Full Certification" class="modal-img w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Modal -->
+    <div class="modal" id="imageModal" onclick="closeModal(this, true)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img id="modalImage" src="" alt="Modal Image">
+            <button class="close-btn" onclick="closeModal(this, false)">&times;</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal(src) {
+            document.getElementById('imageModal').style.display = 'flex';
+            document.getElementById('modalImage').src = src;
+        }
+
+
+        function closeModal(modal, condition) {
+            if (condition) {
+                console.log(modal);
+                modal.style.display = 'none';
+            } else {
+                if (modal.parentNode && modal.parentNode.parentNode) {
+                    modal.parentNode.parentNode.style.display = 'none';
+                }
+            }
+        }
+
+    </script>
+    <script>
+        const modal = document.getElementById('certModal');
+        const modalImg = document.querySelector('.modal-img');
+        document.querySelectorAll('.cert-img').forEach(img => {
+            img.addEventListener('click', () => {
+                console.log('clicked', modalImg, img)
+                modalImg.src = img.dataset.src;
+                modal.style.display = 'block';
+                modal.classList.remove('fade');
+            });
+        });
+    </script>
+
+    <footer>
+        <div class="footer-top relative padding-tb bg-ash">
+            <div class="shape-images">
+                <img src="assets/images/shape-images/03.png" alt="shape-images" />
+            </div>
+            <div class="container">
+                <div class="section-wrapper row">
+                    <div class="col-12  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                        <div class="post-item">
+                            <div class="footer-logo mb-3 text-center">
+                                <img src="assets/images/logo/01.png" alt="footer-logo" />
+                            </div>
+                            <p class="text-center">
+                                Supplying premium fresh, frozen, and live seafood across global markets since 1986.
+                                Trusted by partners
+                                in the Middle East, Europe, and Asia for our quality and commitment.
+                            </p>
+
+                            <ul class="lab-ul footer-location center-aligned">
+                                <li>
+                                    <div class="icon-part">
+                                        <i class="icofont-user"></i>
+                                    </div>
+                                    <div class="content-part">
+                                        <p><strong>TAHAMA TRADING COMPANY</strong></p>
+                                        <p>Tariq Riaz Siddiqi</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon-part">
+                                        <i class="icofont-phone"></i>
+                                    </div>
+                                    <div class="content-part">
+                                        <p>+92-302-2727469</p>
+                                        <p>WhatsApp: +92-332-3644075</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon-part">
+                                        <i class="icofont-email"></i>
+                                    </div>
+                                    <div class="content-part">
+                                        <p><a href="mailto:tahama.fisheries@gmail.com">tahama.fisheries@gmail.com</a>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon-part">
+                                        <i class="icofont-location-pin"></i>
+                                    </div>
+                                    <div class="content-part">
+                                        <p>B-1, Sector 15-A-5, Buffer Zone,<br />North Nazimabad, Karachi, Pakistan</p>
+                                    </div>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+            <div class="container">
+                <div class="section-wrapper">
+                    <p class="text-center">
+                        &copy; 2025 <a href="index.html">Tahama Trading Company</a>. All Rights Reserved.
+                        Developed by <a href="#">Pheonix_Dev</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- scrollToTop start here -->
+    <a href="#" class="scrollToTop"><i class="icofont-swoosh-up"></i><span class="pluse_1"></span><span
+            class="pluse_2"></span></a>
+    <!-- scrollToTop ending here -->
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/fontawesome.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/lightcase.js"></script>
+    <script src="assets/js/functions.js"></script>
+</body>
+
+</html>
