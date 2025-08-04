@@ -297,7 +297,7 @@
   <div class="awap-section padding-tb">
     <div class="container">
       <div class="section-wrapper">
-        <div class="awap-top">
+        <div class="awap-top" id="japan_export">
           <div class="row justify-content-center">
             <div class="col-12 col-lg-6 ">
               <div class="awap-content">
@@ -353,7 +353,7 @@
           </div>
         </div>
         <!-- current -->
-        <div class="awap-bottom">
+        <div class="awap-bottom" id="indonesia_export">
           <div class="row justify-content-center flex-row-reverse">
             <div class="col-12 col-lg-6 ">
               <div class="awap-content">
@@ -403,7 +403,7 @@
             </div>
           </div>
         </div>
-        <div class="awap-top space-above">
+        <div class="awap-top space-above" id="malaysia_export">
           <div class="row justify-content-center">
             <div class="col-12 col-lg-6 ">
               <div class="awap-content">
@@ -452,7 +452,7 @@
 
         </div>
 
-        <div class="awap-bottom">
+        <div class="awap-bottom" id="pakistan_export">
           <div class="row justify-content-center flex-row-reverse">
             <div class="col-12 col-lg-6 ">
               <div class="awap-content">
@@ -497,7 +497,7 @@
             </div>
           </div>
         </div>
-        <div class="awap-bottom space-above">
+        <div class="awap-bottom space-above" id="oman_export">
           <div class="row justify-content-center row_column">
 
             <div class="col-12 col-lg-6 d-flex flex-sm-only-column ">
@@ -683,7 +683,22 @@
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <script src="assets/js/lightcase.js"></script>
     <script src="assets/js/functions.js"></script>
-
+    <script>
+      window.addEventListener('DOMContentLoaded', function () {
+        const hash = window.location.hash;
+        if (hash) {
+          const target = document.querySelector(hash);
+          if (target) {
+            setTimeout(() => {
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center' // <- This centers it vertically
+              });
+            }, 10); // slight delay ensures rendering is complete
+          }
+        }
+      });
+    </script>
 </body>
 
 </html>
