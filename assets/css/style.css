@@ -51,6 +51,10 @@ Tags: bootstrap, Butcher, butcher shop, chicken, ecommerce, fish, meat, meat sho
 
 >>> TABLE OF CONTENTS END:
 @@@@@@@@@@@@@@@@@@@@@@ */
+
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css");
+
 * {
   margin: 0;
   padding: 0;
@@ -5436,6 +5440,8 @@ img {
 
 .footer-top .post-item .footer-location li .icon-part {
   width: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-top .post-item .footer-location li .icon-part i {
@@ -5580,10 +5586,11 @@ img {
 }
 
 .center-aligned {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   width: 100%;
-  gap: 6em;
+  gap: 2em;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 769px) {
@@ -5712,4 +5719,27 @@ img {
   position: relative;
 }
 
-.relative .hero-text {}
+.company_name_text {
+  font-weight: 500;
+  font-style: italic;
+  color: #e4405f;
+}
+
+.full-w {
+  width: 100%;
+  max-width: 100% !important;
+}
+
+.row_column {
+  flex-direction: row-reverse !important;
+}
+
+@media (max-width: 991px) {
+  .row_column {
+    flex-direction: column-reverse !important;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  }
+}
