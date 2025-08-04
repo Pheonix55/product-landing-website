@@ -724,106 +724,7 @@
       }
     });
   </script>
-  <script>
-    const productss = [
-      {
-        title: "EEL",
-        img: "assets/images/products/product/01.png",
-        description: "High-protein seafood delicacy known for its rich flavor."
-      },
-      {
-        title: "White Croackers",
-        img: "assets/images/products/product/02.png",
-        description: "Mild-flavored fish ideal for grilling or frying."
-      },
-      {
-        title: "Ribbon Fish",
-        img: "assets/images/products/product/03.png",
-        description: "Long-bodied fish commonly used in Asian cuisine."
-      },
-      {
-        title: "Silver Pomfret",
-        img: "assets/images/products/product/04.png",
-        description: "Popular for its delicate flesh and clean taste."
-      },
-      {
-        title: "Chinese Pomfret",
-        img: "assets/images/products/product/05.png",
-        description: "Highly prized fish with tender white meat."
-      },
-      {
-        title: "SPOTTED SPANISH MACKEREL",
-        img: "assets/images/products/product/06.png",
-        description: "Fast-swimming predator known for its oily richness."
-      },
-      {
-        title: "BARRED SPANISH MACKEREL",
-        img: "assets/images/products/product/07.png",
-        description: "Flavorful fish with firm, flaky flesh."
-      },
-      {
-        title: "TONGUE SOLE",
-        img: "assets/images/products/product/08.png",
-        description: "Flatfish with sweet, delicate meat perfect for fillets."
-      },
-      {
-        title: "TONGUE SOLE",
-        img: "assets/images/products/product/09.png",
-        description: "A second variety of tongue sole with mild flavor."
-      },
-      {
-        title: "HATA",
-        img: "assets/images/products/product/10.png",
-        description: "Grouper species prized for its firm texture and taste."
-      },
-      {
-        title: "CUTTLE FISH",
-        img: "assets/images/products/product/11.png",
-        description: "Cephalopod with tender meat, ideal for grilling or curry."
-      },
-      {
-        title: "BLUE SWIMMING CRABS",
-        img: "assets/images/products/product/12.png",
-        description: "Sweet, flaky meat from vibrant blue crabs."
-      },
-      {
-        title: "WHITE SHRIMPS",
-        img: "assets/images/products/product/13.png",
-        description: "Versatile and succulent shrimp used in many cuisines."
-      },
-      {
-        title: "YELLOW FIN TUNA",
-        img: "assets/images/products/product/14.png",
-        description: "Firm and flavorful tuna perfect for steaks and sashimi."
-      },
-      {
-        title: "SKIP JACK TUNA",
-        img: "assets/images/products/product/15.png",
-        description: "Commonly used in canned tuna, rich in flavor."
-      }
-    ];
-    const productList = document.getElementById("product-list");
 
-    productss.forEach((product, index) => {
-      const card = document.createElement("div");
-      card.className = "col-xl-3 col-lg-4 col-sm-6 col-12";
-
-      card.innerHTML = `
-    <div class="card product-card py-4 px-2 mb-4 text-center bg-ash border-none relative">
-      ${index % 2 === 0 ? '<span class="lab-offer">-50%</span>' : ""}
-      <img src="${product.img}" class="card-img-top mb-2" alt="${product.title}" />
-      <div class="card-body">
-        <a href="#">
-          <h6 class="card-title mb-2">${product.title}</h6>
-        </a>
-      </div>
-    </div>
-  `;
-
-      productList.appendChild(card);
-    });
-
-  </script>
   <script>
     const products = [
       {
@@ -875,43 +776,43 @@
         description: "Flatfish with sweet, delicate meat perfect for fillets."
       },
       {
-        title: "TONGUE SOLE",
+        title: "GROUPERS (Hata)",
         price: 250,
         img: "assets/images/products/product/09.png",
         description: "A second variety of tongue sole with mild flavor."
       },
       {
-        title: "HATA",
+        title: "CUTTLE FISH",
         price: 250,
         img: "assets/images/products/product/10.png",
         description: "Grouper species prized for its firm texture and taste."
       },
       {
-        title: "CUTTLE FISH",
+        title: "BLUE SWIMMING CRABS",
         price: 250,
         img: "assets/images/products/product/11.png",
         description: "Cephalopod with tender meat, ideal for grilling or curry."
       },
       {
-        title: "BLUE SWIMMING CRABS",
+        title: "WHITE SHRIMPS",
         price: 250,
         img: "assets/images/products/product/12.png",
         description: "Sweet, flaky meat from vibrant blue crabs."
       },
       {
-        title: "WHITE SHRIMPS",
+        title: "YELLOW FIN TUNA",
         price: 250,
         img: "assets/images/products/product/13.png",
         description: "Versatile and succulent shrimp used in many cuisines."
       },
       {
-        title: "YELLOW FIN TUNA",
+        title: "SKIP JACK TUNA",
         price: 250,
         img: "assets/images/products/product/14.png",
         description: "Firm and flavorful tuna perfect for steaks and sashimi."
       },
       {
-        title: "SKIP JACK TUNA",
+        title: "TOP SHELL",
         price: 250,
         img: "assets/images/products/product/15.png",
         description: "Commonly used in canned tuna, rich in flavor."
