@@ -231,7 +231,7 @@
           <div class="section-wrapper">
             <div class="row justify-content-center">
               <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
-                <div class="card p-2 mb-4 text-center border-none">
+                <div class="card p-2 mb-4 text-center border-none" id="pakistan_export">
                   <img src="assets/images/flag/pakistan.jpg" class="card-img-top" alt="product" />
                   <div class="card-body">
                     <a href="#">
@@ -242,7 +242,7 @@
                 </div>
               </div>
               <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
-                <div class="card p-2 mb-4 text-center border-none">
+                <div class="card p-2 mb-4 text-center border-none" id="oman_export">
                   <img src="assets/images/flag/oman.png" class="card-img-top" alt="product" />
                   <div class="card-body">
                     <a href="#">
@@ -264,7 +264,7 @@
                 </div>
               </div>
               <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
-                <div class="card p-2 mb-4 text-center border-none">
+                <div class="card p-2 mb-4 text-center border-none" id="indonesia_export">
                   <img src="assets/images/flag/indonesia.jpg" class="card-img-top" alt="product" />
                   <div class="card-body">
                     <a href="#">
@@ -302,7 +302,7 @@
           <div class="section-wrapper">
             <div class="row justify-content-center">
               <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
-                <div class="card p-2 mb-4 text-center border-none">
+                <div class="card p-2 mb-4 text-center border-none" id="japan_export">
                   <img src="assets/images/flag/japan.jpg" class="card-img-top" alt="product" />
                   <div class="card-body">
                     <a href="#">
@@ -313,7 +313,7 @@
                 </div>
               </div>
               <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
-                <div class="card p-2 mb-4 text-center border-none">
+                <div class="card p-2 mb-4 text-center border-none" id="malaysia_export">
                   <img src="assets/images/flag/malaysia.jpg" class="card-img-top" alt="product" />
                   <div class="card-body">
                     <a href="#">
@@ -497,6 +497,22 @@
   <script src="assets/js/isotope.pkgd.min.js"></script>
   <script src="assets/js/lightcase.js"></script>
   <script src="assets/js/functions.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      const hash = window.location.hash;
+      if (hash) {
+        const target = document.querySelector(hash);
+        if (target) {
+          setTimeout(() => {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'center' // <- This centers it vertically
+            });
+          }, 10); // slight delay ensures rendering is complete
+        }
+      }
+    });
+  </script>
 
 </body>
 
